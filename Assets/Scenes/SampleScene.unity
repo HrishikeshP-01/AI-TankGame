@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 6f7c16e387e05214e8714657ddaf8a0b, type: 2}
 --- !u!1 &505659200
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +439,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5626941845342892137, guid: 213748214249157419cdb7fd0d51517c, type: 3}
+      propertyPath: pointA
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -5305143867635544656, guid: 213748214249157419cdb7fd0d51517c, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5305143867635544656, guid: 213748214249157419cdb7fd0d51517c, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -149552035546976302, guid: 213748214249157419cdb7fd0d51517c, type: 3}
+      propertyPath: m_Height
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -149552035546976302, guid: 213748214249157419cdb7fd0d51517c, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8103486398677990759, guid: 213748214249157419cdb7fd0d51517c, type: 3}
       propertyPath: m_Name
       value: EnemyTankPlaceholder
@@ -508,9 +528,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5305143867635544656, guid: 4faf0a7f9c2604f48956cf63a64fca32, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -149552035546976302, guid: 4faf0a7f9c2604f48956cf63a64fca32, type: 3}
+      propertyPath: m_Height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -149552035546976302, guid: 4faf0a7f9c2604f48956cf63a64fca32, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8103486398677990759, guid: 4faf0a7f9c2604f48956cf63a64fca32, type: 3}
       propertyPath: m_Name
       value: PlayerTankPlaceholder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103486398677990759, guid: 4faf0a7f9c2604f48956cf63a64fca32, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8880690952534583261, guid: 4faf0a7f9c2604f48956cf63a64fca32, type: 3}
       propertyPath: m_RootOrder

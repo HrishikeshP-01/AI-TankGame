@@ -37,6 +37,7 @@ public class TankScript : MonoBehaviour
     {
         currentTarget = (currentTarget == 0) ? 1 : 0;
         navMeshAgent.SetDestination(waypoints[currentTarget].position);
+        Debug.Log("Set next waypoint");
     }
 
     private void FixedUpdate()
