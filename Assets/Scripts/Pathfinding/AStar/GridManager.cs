@@ -188,6 +188,8 @@ public class GridManager : MonoBehaviour
         }
 
         // Draw obstacle cubes at last
+        if (!showObstacleBlocks) { return; }
+
         drawColor = Color.red;
         foreach (Node y in nodes)
         {
