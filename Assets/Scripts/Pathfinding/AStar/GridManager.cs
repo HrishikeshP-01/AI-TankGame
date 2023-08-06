@@ -108,7 +108,9 @@ public class GridManager : MonoBehaviour
                 int indexCell = GetGridIndex(data.transform.position);
                 int column = GetColumnOfIndex(indexCell);
                 int row = GetRowOfIndex(indexCell);
-
+                Debug.Log(row+"DDD");
+                Debug.Log(column + "XXX");
+                Debug.Log(data.transform.position);
                 nodes[row, column].MarkAsObstacle();
             }
         }
