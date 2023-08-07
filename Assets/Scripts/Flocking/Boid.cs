@@ -36,7 +36,7 @@ public class Boid : MonoBehaviour
         if (targetDirection == Vector3.zero) { return; }
 
         direction = targetDirection.normalized;
-        direction *= FlockController.speedModifier;
+        direction *= flockController.SpeedModifier;
         transform.Translate(direction * Time.deltaTime);
     }
 }
