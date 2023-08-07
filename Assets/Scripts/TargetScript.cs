@@ -25,6 +25,7 @@ public class TargetScript : MonoBehaviour
             if(Physics.Raycast(ray.origin,ray.direction,out hitInfo))
             {
                 Vector3 targetPosition = hitInfo.point;
+                targetPosition.y = targetMarker.position.y;
                 targetMarker.position = targetPosition;
             }
         }
