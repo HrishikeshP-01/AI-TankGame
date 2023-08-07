@@ -29,15 +29,21 @@ public class FlockingTargetMovement : MonoBehaviour
         targetPosition.y = Random.Range(initialPosition.y - bounds.y * 0.5f, initialPosition.y + bounds.y * 0.5f);
         targetPosition.z = Random.Range(initialPosition.z - bounds.z * 0.5f, initialPosition.z + bounds.z * 0.5f);
 
-        nextPosition = initialPosition + targetPosition;
+        nextPosition = targetPosition;
     }
 
     private void Update()
     {
+        if (Vector3.Distance(transform.position, nextPosition) < targetPointTolerance) { CalculateNextMovementPoint(); }
+
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(nextPosition - transform.position), turnSpeed * Time.deltaTime);
         transform.Translate(transform.forward * movementSpeed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, nextPosition) < targetPointTolerance) { CalculateNextMovementPoint(); }
     }
 
+    private void OnDrawGizmos()
+    {
+        //Visualize the bounds of the target
+        Gizmos.DrawWireCube(initialPosition, bounds);
+        Gizmos.DrawWireSphere(nextPosition, 1.0f);
+    }
 }
