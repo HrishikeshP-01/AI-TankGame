@@ -31,6 +31,8 @@ public class Boid : MonoBehaviour
 
     private void Update()
     {
+        targetDirection = flockController.Flock(this, transform.localPosition, direction);
+
         if (targetDirection == Vector3.zero) { return; }
 
         direction = targetDirection.normalized;

@@ -16,4 +16,9 @@ public class FlockController : MonoBehaviour
     {
         
     }
+
+    public Vector3 Flock(Boid boid, Vector3 boidPosition, Vector3 boidDirection)
+    {
+        return Vector3.zero;
+    }
 }
