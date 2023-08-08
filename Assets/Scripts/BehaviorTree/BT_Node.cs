@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public abstract class Node
+public abstract class BT_Node
 {
     //Delegate that returns the state of the node
     public delegate NodeStates NodeReturn();
@@ -15,7 +15,7 @@ public abstract class Node
     public NodeStates NodeState { get { return nodeState; } }
 
     //Constructor for Node
-    Node() { }
+    BT_Node() { }
 
     //Implementing classes use this method to evaluate the desired set of conditions
     public abstract NodeStates Evaluate();
