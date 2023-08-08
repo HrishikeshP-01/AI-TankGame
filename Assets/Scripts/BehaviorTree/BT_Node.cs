@@ -15,7 +15,7 @@ public abstract class BT_Node
     public NodeStates NodeState { get { return nodeState; } }
 
     //Constructor for Node
-    BT_Node() { }
+    public BT_Node() { }
 
     //Implementing classes use this method to evaluate the desired set of conditions
     public abstract NodeStates Evaluate();
