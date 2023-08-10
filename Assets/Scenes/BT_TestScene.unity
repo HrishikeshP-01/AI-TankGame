@@ -1894,7 +1894,7 @@ MonoBehaviour:
   ob_Node2b: {fileID: 1061332318}
   ob_Node2c: {fileID: 773058834}
   ob_Node3: {fileID: 755763108}
-  targetValue: 20
+  targetValue: 2
   m_valueLabel: {fileID: 715553115}
 --- !u!1 &1925136950
 GameObject:
