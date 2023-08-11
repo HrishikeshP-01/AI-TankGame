@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class FuzzySample : MonoBehaviour
 {
@@ -12,11 +13,17 @@ public class FuzzySample : MonoBehaviour
     public AnimationCurve hurt;
     public AnimationCurve healthy;
 
-    public InputField healthInput;
+    //public InputField healthInput;
+    public GameObject healthInput;
 
+    /*
     public Text healthyLabel;
     public Text hurtLabel;
     public Text criticalLabel;
+    */
+    public GameObject healthyLabel;
+    public GameObject hurtLabel;
+    public GameObject criticalLabel;
 
     private float criticalValue = 0.0f;
     private float hurtValue = 0.0f;
@@ -24,9 +31,9 @@ public class FuzzySample : MonoBehaviour
 
     private void SetLabels()
     {
-        healthyLabel.text = string.Format(labelText, healthyValue);
-        hurtLabel.text = string.Format(labelText, hurtValue);
-        criticalLabel.text = string.Format(labelText, criticalValue);
+        healthyLabel.GetComponent<TMP_Text>().text = string.Format(labelText, healthyValue);
+        hurtLabel.GetComponent<TMP_Text>().text = string.Format(labelText, hurtValue);
+        criticalLabel.GetComponent<TMP_Text>().text = string.Format(labelText, criticalValue);
     }
 
     private void Start()
@@ -37,9 +44,10 @@ public class FuzzySample : MonoBehaviour
     // Evaluates all the curves & returns float values
     public void EvaluateStatements()
     {
-        if (string.IsNullOrEmpty(healthInput.text)) { return; }
+        string inputtext = healthInput.GetComponent<TMP_InputField>().text;
+        if (inputtext == null) { return; }
 
-        float inputValue = float.Parse(healthInput.text);
+        float inputValue = float.Parse(inputtext);
 
         healthyValue = healthy.Evaluate(inputValue);
         hurtValue = hurt.Evaluate(inputValue);
