@@ -19,7 +19,11 @@ public class Tower : MonoBehaviour
 
     private bool isLockedOn = false;
 
-    public bool LockedOn { get { return isLockedOn; } }
+    public bool LockedOn 
+    { 
+        get { return isLockedOn; }
+        set { isLockedOn = value; }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
