@@ -38,7 +38,11 @@ public class ConversationManager : MonoBehaviour
 
     private void LoadQuestion(int index)
     {
-        if (index < 0 || index >= questions.Length) { EndConversation(); }
+        if (index < 0 || index >= questions.Length) 
+        { 
+            EndConversation();
+            return;
+        }
 
         questionText.text = questions[index].questionText;
         AnswerButton1.GetComponentInChildren<Text>().text = questions[index].answers[0].answerText;
@@ -67,6 +71,8 @@ public class ConversationManager : MonoBehaviour
         float goodRating = good.Evaluate(average);
         float neutralRating = neutral.Evaluate(average);
         float evilRating = evil.Evaluate(average);
+
+        Debug.Log(average);
 
         string alignmentText = (goodRating > neutralRating) ? ((goodRating > evilRating) ? "Good" : "Evil") : ((neutralRating > evilRating) ? "Neutral" : "Evil");
 
