@@ -38,7 +38,7 @@ public class Tower : MonoBehaviour
     private void FireProjectile()
     {
         GameObject bullet = Instantiate(projectile, muzzle);
-        bullet.GetComponent<Rigidbody>().AddForce(muzzle.forward * 300f);
+        bullet.GetComponent<Rigidbody>().AddForce(muzzle.forward * 3f);
     }
 
     private IEnumerator Fire()
@@ -61,6 +61,6 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isLockedOn && canFire) { StartCoroutine(Fire()); }
+        if (isLockedOn && canFire) { StartCoroutine(Fire());Debug.Log("Fire"); }
     }
 }

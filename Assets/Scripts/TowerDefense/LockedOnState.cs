@@ -16,7 +16,7 @@ public class LockedOnState : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.transform.LookAt(player.transform);
+        animator.gameObject.transform.LookAt(player.transform.position);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
