@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 3077028131960299650}
   - component: {fileID: 1144776636718727401}
   m_Layer: 0
-  m_Name: BoostParticleSystem
+  m_Name: Boost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3596121325497699842
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4465609325375941021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.33141, y: 0.12065, z: 3.3567}
+  m_LocalScale: {x: -0.002457657, y: 0.132715, z: 1.6531886}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3389258151022735271}
@@ -4823,6 +4823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 2386758739813113829, guid: d71184a4f12afd94d8808a80e48a7ce0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7259900822745130820, guid: d71184a4f12afd94d8808a80e48a7ce0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4881,6 +4885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d71184a4f12afd94d8808a80e48a7ce0, type: 3}
+--- !u!1 &2783383724310477629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2386758739813113829, guid: d71184a4f12afd94d8808a80e48a7ce0, type: 3}
+  m_PrefabInstance: {fileID: 558420711534732504}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2919362980002121804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4965,9 +4974,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentGoal: {fileID: 0}
   boostSpeedDuration: 3
-  boostParticleSystem: {fileID: 0}
+  boostParticleSystem: {fileID: 3077028131960299650}
   shieldDuration: 3
-  shield: {fileID: 0}
+  shield: {fileID: 2783383724310477629}
+--- !u!195 &5111002257526299625
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2612862906647115037}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.21750179
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.29843634
+  m_BaseOffset: 0.14921817
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &3389258151022735271 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aab37201178ab7a4d9520d214ca343dc, type: 3}
